@@ -406,7 +406,7 @@
 
     // Auto-init
     if (document.currentScript) {
-        if (document.currentScript.hasAttribute('data-auto-init') ||
+        if (document.currentScript.getAttribute('data-auto-init') === 'true' ||
             !(window as unknown as { dcecWidget?: { init?: unknown } }).dcecWidget ||
             !(window as unknown as { dcecWidget?: { init?: unknown } }).dcecWidget?.init) {
             init();
