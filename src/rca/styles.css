@@ -1,0 +1,165 @@
+/*!
+ * Di Chi È La Colpa? - Widget Styles (RCA)
+ * Embedded responsibility calculator for third-party sites
+ */
+
+.dcec-widget {
+    --dcec-primary: #2563eb;
+    --dcec-primary-text: #ffffff;
+    --dcec-bg: #ffffff;
+    --dcec-text: #111827;
+    --dcec-border: #d1d5db;
+    --dcec-muted: #6b7280;
+    --dcec-ai: #6b7280;
+    --dcec-select-bg: #ffffff;
+
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    background: var(--dcec-bg);
+    color: var(--dcec-text);
+    border: 1px solid var(--dcec-border);
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    container-type: inline-size;
+    container-name: widget;
+}
+
+.dcec-widget *,
+.dcec-widget *::before,
+.dcec-widget *::after {
+    box-sizing: inherit;
+}
+
+.dcec-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+}
+
+.dcec-form {
+    display: contents;
+}
+
+.dcec-fields {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+@container widget (min-width: 480px) {
+    .dcec-fields {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.dcec-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.dcec-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--dcec-text);
+}
+
+.dcec-select {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid var(--dcec-border);
+    border-radius: 6px;
+    background: var(--dcec-select-bg, #fff);
+    color: var(--dcec-text);
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.dcec-select:hover {
+    border-color: var(--dcec-primary);
+}
+
+.dcec-select:focus {
+    outline: 2px solid var(--dcec-primary);
+    outline-offset: 1px;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.dcec-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.dcec-btn {
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+.dcec-btn:hover {
+    opacity: 0.9;
+}
+
+.dcec-btn:active {
+    transform: scale(0.98);
+}
+
+.dcec-btn:focus {
+    outline: 2px solid var(--dcec-primary);
+    outline-offset: 2px;
+}
+
+.dcec-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.dcec-btn-submit {
+    flex-grow: 1;
+    background: var(--dcec-primary);
+    color: var(--dcec-primary-text);
+}
+
+.dcec-btn-ai {
+    background: var(--dcec-ai);
+    color: #fff;
+}
+
+.dcec-powered {
+    font-size: 12px;
+    color: var(--dcec-muted);
+    text-align: center;
+    margin: 0;
+    padding: 8px;
+}
+
+.dcec-powered span {
+    display: inline-block;
+    padding: 6px 10px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 4px;
+}
+
+.dcec-powered a {
+    color: var(--dcec-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.dcec-powered a:hover {
+    text-decoration: underline;
+}

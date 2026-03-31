@@ -1,0 +1,40 @@
+{
+  "name": "dichielacolpa-widget",
+  "version": "1.0.0",
+  "description": "Embeddable responsibility calculator widget for third-party sites",
+  "main": "build/rca/widget.js",
+  "types": "build/rca/widget.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "node src/rca/build.js",
+    "dev": "node src/rca/build.js --watch",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "widget",
+    "calculator",
+    "responsibility",
+    "car-accident",
+    "insurance",
+    "italy"
+  ],
+  "author": "Andrea Gelmini",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AndreaGelmini/dichielacolpa-widget"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.0",
+    "typescript": "^5.3.0",
+    "eslint": "^8.56.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "prettier": "^3.2.0"
+  }
+}
