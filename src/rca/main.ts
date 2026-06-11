@@ -51,7 +51,7 @@ export const CIRCUMSTANCES: string[] = [
     '17 - Non aveva osservato il segnale di precedenza o di semaforo rosso',
 ];
 
-export const BASE_URL = 'https://dichielacolpa.altervista.org';
+export const BASE_URL = 'https://dichielacolpa.it';
 
 // CSS injected at build time by esbuild (define: DCEC_CSS)
 // @ts-ignore
