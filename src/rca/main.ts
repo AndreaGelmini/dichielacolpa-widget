@@ -51,7 +51,7 @@ export const CIRCUMSTANCES: string[] = [
     '17 - Non aveva osservato il segnale di precedenza o di semaforo rosso',
 ];
 
-export const BASE_URL = 'https://dichielacolpa.it';
+export const BASE_URL = 'https://www.dichielacolpa.it';
 
 // CSS injected at build time by esbuild (define: DCEC_CSS)
 // @ts-ignore
@@ -174,7 +174,7 @@ export function createWidget(config: WidgetConfig): void {
                 </div>
             </form>
             <p class="dcec-powered">
-                <span>Powered by <a href="${BASE_URL}" target="_blank" rel="noopener">dichielacolpa.it</a></span>
+                <span>Powered by <a href="${BASE_URL}" target="_blank" rel="noopener">www.dichielacolpa.it</a></span>
             </p>
         </div>
     `;
